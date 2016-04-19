@@ -34,7 +34,7 @@ int rot_writelock(rotation_range *rot);
 void rot_readunlock();
 void rot_writeunlock();
 ```
-먼저 read lock는 현재 각도에 range가 포함되면 이미 겹치거나 같은 범위에 다른 프로세스가 read lock을 가지고 있더라도 획득할 수 있습니다. 하지만 write lock은 이미 다른 프로세스에서 획득한 write lock과 범위가 겹친다면
+먼저 read lock는 현재 각도에 range가 포함되면 이미 겹치거나 같은 범위에 다른 프로세스가 read lock을 가지고 있더라도 획득할 수 있습니다. 하지만 write lock은 혅현재 각도에  range가 포함되더라도 이미 다른 프로세스에서 획득한 write lock와 범위가 겹친다면
 write lock을 획득할 수 없습니다.
 
 
